@@ -4,7 +4,7 @@ const covid19ImpactEstimator = (data) => {
     timeToElapse,
     periodType,
     totalHospitalBeds,
-    region
+    region,
   } = data;
   let rate;
   let period;
@@ -53,7 +53,7 @@ const covid19ImpactEstimator = (data) => {
     hospitalBedsByRequestedTime: impactHospitalBedsByRequestedTime,
     casesForICUByRequestedTime: impactCasesForICUByRequestedTime,
     casesForVentilatorsByRequestedTime: impactCasesForVentilatorsByRequestedTime,
-    dollarsInFlight: impactDollarsInFlight
+    dollarsInFlight: impactDollarsInFlight,
   };
 
   // worst case attributions.
@@ -65,7 +65,7 @@ const covid19ImpactEstimator = (data) => {
     hospitalBedsByRequestedTime,
     casesForICUByRequestedTime,
     casesForVentilatorsByRequestedTime,
-    dollarsInFlight
+    dollarsInFlight,
   };
 
   // picking data.
@@ -73,7 +73,7 @@ const covid19ImpactEstimator = (data) => {
   return {
     data,
     impact,
-    severeImpact
+    severeImpact,
   };
 };
 

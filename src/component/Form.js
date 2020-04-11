@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     alignItems: 'center',
   },
-  
+
   // Add form styling.
   form: {
     width: '100%',
@@ -53,7 +53,7 @@ export default function Form() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(state);
+    // console.log(state);
   };
 
   return (
