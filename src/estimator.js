@@ -45,7 +45,7 @@ const covid19ImpactEstimator = (data) => {
                               * region.avgDailyIncomeInUSD) / period);
 
 
-  // data for simple case scenarios.
+  // data for best case scenarios.
   const impact = {
     currentlyInfected: impactCurrentlyInfected,
     infectionsByRequestedTime: impactInfectionsByRequestedTime,
