@@ -68,7 +68,6 @@ const covid19ImpactEstimator = (data) => {
     dollarsInFlight,
   };
 
-  // picking data.
 
   return {
     data,
