@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from 'react';
 import Select from '@material-ui/core/Select';
 import Button from '@material-ui/core/Button';
@@ -71,89 +72,95 @@ export default function Form() {
           onSubmit={handleSubmit}
         >
           <div className="data-form-inputs">
-            <span className="d-block padding-s">Population</span>
-            <input
-              variant="outlined"
-              required
-              fullWidth
-              id="population"
-              label="Population"
-              name="population"
-              type="number"
-              data-population
-              value={state.population}
-              onChange={handleChange}
-            />
+            <label htmlFor="Population" className="d-block padding-s">
+              Population
+              <input
+                variant="outlined"
+                required
+                fullWidth
+                id="population"
+                name="population"
+                type="number"
+                data-population
+                value={state.population}
+                onChange={handleChange}
+              />
+            </label>
           </div>
               &nbsp;
           <div className="data-form-inputs">
-            <span className="d-block padding-s">Reported Cases</span>
-            <input
-
-              variant="outlined"
-              required
-              fullWidth
-              name="reportedCases"
-              label="Reported Cases"
-              id="reported-cases"
-              type="number"
-              data-reported-cases
-              value={state.reportedCases}
-              onChange={handleChange}
-            />
-          </div>
-          <div className="data-form-inputs">
-            <span className="d-block padding-s">Total Hospital Beds</span>
-            <input
-
-
-              variant="outlined"
-              required
-              fullWidth
-              id="total-hospital-beds"
-              label="Total Hospital Beds"
-              name="totalHospitalBeds"
-              type="number"
-              data-total-hospital-beds
-              value={state.totalHospitalBeds}
-              onChange={handleChange}
-            />
-          </div>
-          <div className="d-flex">
-            <div className="data-form-inputs">
-              <span className="d-block padding-s">Time To Elapse</span>
+            <label htmlFor="Reported Cases" className="d-block padding-s">
+              Reported Cases
               <input
 
                 variant="outlined"
                 required
                 fullWidth
-                id="time-to-elapse"
-                label="Time To Elapse"
-                name="timeToElapse"
+                name="reportedCases"
+                id="reported-cases"
                 type="number"
-                data-time-to-elapse
-                value={state.timeToElapse}
+                data-reported-cases
+                value={state.reportedCases}
                 onChange={handleChange}
               />
+            </label>
+          </div>
+          <div className="data-form-inputs">
+            <label htmlFor="Total Hospital Beds" className="d-block padding-s">
+              Total Hospital Beds
+              <input
+
+
+                variant="outlined"
+                required
+                fullWidth
+                id="total-hospital-beds"
+                name="totalHospitalBeds"
+                type="number"
+                data-total-hospital-beds
+                value={state.totalHospitalBeds}
+                onChange={handleChange}
+              />
+            </label>
+          </div>
+          <div className="d-flex">
+            <div className="data-form-inputs">
+              <label htmlFor="Time To Elapse" className="d-block padding-s">
+                Time To Elapse
+                <input
+
+                  variant="outlined"
+                  required
+                  fullWidth
+                  id="time-to-elapse"
+                  name="timeToElapse"
+                  type="number"
+                  data-time-to-elapse
+                  value={state.timeToElapse}
+                  onChange={handleChange}
+                />
+              </label>
             </div>
               &nbsp;
           </div>
           <br />
           <div className="data-form-inputs">
-            <span className="d-block padding-s">Period Type</span>
-            <Select
-              id="period-type"
-              name="periodType"
-              variant="outlined"
-              label="Period Type"
-              onChange={handleChange}
-              value={state.periodType}
-              inputProps={{ 'data-period-type': true }}
-            >
-              <MenuItem data-period-type="true" value="days">Days</MenuItem>
-              <MenuItem data-period-type="true" value="weeks">Weeks</MenuItem>
-              <MenuItem data-period-type="true" value="months">Months</MenuItem>
-            </Select>
+            <label htmlFor="Period Type" className="d-block padding-s">
+              Period Type
+              <Select
+                id="period-type"
+                name="periodType"
+                variant="outlined"
+                onChange={handleChange}
+                data-period-type
+                value={state.periodType}
+                inputProps={{ 'data-period-type': true }}
+              >
+                <MenuItem data-period-type="true" value="days">Days</MenuItem>
+                <MenuItem data-period-type="true" value="weeks">Weeks</MenuItem>
+                <MenuItem data-period-type="true" value="months">Months</MenuItem>
+              </Select>
+            </label>
 
           </div>
           <Button
