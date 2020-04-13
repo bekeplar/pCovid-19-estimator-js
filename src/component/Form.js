@@ -1,8 +1,6 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from 'react';
-import Select from '@material-ui/core/Select';
 import Button from '@material-ui/core/Button';
-import MenuItem from '@material-ui/core/MenuItem';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -147,19 +145,16 @@ export default function Form() {
           <div className="data-form-inputs">
             <label htmlFor="Period Type" className="d-block padding-s">
               Period Type
-              <Select
+              <input
                 id="period-type"
                 name="periodType"
                 variant="outlined"
+                placeholder="days, weeks, months"
                 onChange={handleChange}
                 data-period-type
                 value={state.periodType}
                 inputProps={{ 'data-period-type': true }}
-              >
-                <MenuItem data-period-type="true" value="days">Days</MenuItem>
-                <MenuItem data-period-type="true" value="weeks">Weeks</MenuItem>
-                <MenuItem data-period-type="true" value="months">Months</MenuItem>
-              </Select>
+              />
             </label>
 
           </div>
