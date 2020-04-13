@@ -143,19 +143,12 @@ export default function Form() {
           </div>
           <br />
           <div className="data-form-inputs">
-            <label htmlFor="Period Type" className="d-block padding-s">
-              Period Type
-              <input
-                id="period-type"
-                name="periodType"
-                variant="outlined"
-                placeholder="days, weeks, months"
-                onChange={handleChange}
-                data-period-type
-                value={state.periodType}
-                inputProps={{ 'data-period-type': true }}
-              />
-            </label>
+            <label htmlFor="periodType">Period Type</label>
+            <select id="periodType" name="periodType" required data-period-type>
+              <option value="days">Days</option>
+              <option value="weeks">weeks</option>
+              <option value="months">Months</option>
+            </select>
 
           </div>
           <Button
